@@ -1,14 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import reportWebVitals from './reportWebVitals';
-import './assets/index.css';
-import { RouterProvider } from 'react-router-dom';
-import router from './router'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import "./assets/index.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./router";
+import { Provider } from "react-redux";
+import store from "./store";
+import SettingTheme from "./features/setting/SettingTheme";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <SettingTheme>
+        <RouterProvider router={router} />
+      </SettingTheme>
+    </Provider>
   </React.StrictMode>
 );
 
