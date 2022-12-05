@@ -1,0 +1,3 @@
+# Generate API Key to node env
+$env:GOOGLE_MAPS_KEY_PRODUCTION=''
+$env:GOOGLE_MAPS_KEY_DEVELOPMENT=''
