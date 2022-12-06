@@ -1,16 +1,16 @@
 import { Button } from "@mui/material";
 import PropTypes from "prop-types";
 
-function BaseButton({ variant, text, color }) {
+function BaseButton({ variant, children, color, ...props }) {
   return (
-    <Button variant={variant} color={color}>
-      {text}
+    <Button variant={variant} color={color} {...props}>
+      {children}
     </Button>
   );
 }
 
 BaseButton.propTypes = {
-  text: PropTypes.string,
+  children: PropTypes.node,
   variant: PropTypes.string,
   color: PropTypes.string
 };
