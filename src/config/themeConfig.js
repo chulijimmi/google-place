@@ -34,9 +34,9 @@ const darkTheme = createTheme({
   }
 });
 
-const theme = {
+const themeConfig = {
   lightTheme,
   darkTheme
 };
 
-export default theme;
+export default themeConfig;

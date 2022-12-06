@@ -1,12 +1,14 @@
 import { ThemeProvider } from "@mui/material";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import theme from "../../config/theme";
+import themeConfig from "../../config/themeConfig";
 
 function SettingTheme({ children, themeName }) {
   return (
     <ThemeProvider
-      theme={themeName === "light" ? theme.lightTheme : theme.darkTheme}
+      theme={
+        themeName === "light" ? themeConfig.lightTheme : themeConfig.darkTheme
+      }
     >
       {children}
     </ThemeProvider>

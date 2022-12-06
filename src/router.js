@@ -17,8 +17,8 @@ const Setting = React.lazy(() => import("./features/setting/Setting"));
 const router = createBrowserRouter(
   createRoutesFromElements(
     <React.Fragment>
+      <Route path="/" element={<App />}></Route>
       <Route element={<PageLayout />} errorElement={<Error404 />}>
-        <Route path="/" element={<App />}></Route>
         <Route path="feed" element={<Feed />} />
         <Route path="setting" element={<Setting />} />
       </Route>
