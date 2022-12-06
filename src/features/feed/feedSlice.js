@@ -3,7 +3,8 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   search: "",
   places: [],
-  visits: []
+  visits: [],
+  errorMessage: ""
 };
 
 const feedSlice = createSlice({
@@ -14,14 +15,15 @@ const feedSlice = createSlice({
       state.search = action.payload;
     },
     setPlaces(state, action) {
-      state.places = action.payload;
+      state.places = action.payload.predictions;
+      state.visits.push(action.payload.visited);
     },
-    addVisit(state, action) {
-      state.visits.push(action.payload);
+    setErrorMessage(state, action) {
+      state.errorMessage = action.payload;
     }
   }
 });
 
-export const { setSearch, setPlaces, addVisit } = feedSlice.actions;
+export const { setSearch, setPlaces, setErrorMessage } = feedSlice.actions;
 
 export default feedSlice.reducer;

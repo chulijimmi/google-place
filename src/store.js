@@ -4,8 +4,16 @@ import { BehaviorSubject } from "rxjs";
 import { switchMap } from "rxjs/operators";
 import rootReducer from "./rootReducer";
 import rootEpic from "./rootEpic";
+import { ajax } from "rxjs/ajax";
 
-const epicMiddleware = createEpicMiddleware();
+const epicMiddleware = createEpicMiddleware({
+  dependencies: {
+    get: ajax.get,
+    post: ajax.post,
+    del: ajax.delete,
+    put: ajax.put
+  }
+});
 const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) =>
