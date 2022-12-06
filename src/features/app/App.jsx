@@ -1,17 +1,17 @@
 import { Container } from "@mui/material";
 import React from "react";
+import BaseTypography from "../../components/BaseTypography";
 import BaseBox from "../../components/BaseBox";
-import BaseButton from "../../components/BaseButton";
-
 function App() {
   return (
-    <React.Fragment>
-      <BaseBox>
-        <Container maxWidth="sm">
-          <BaseButton color="primary" variant="contained" text="Find Place" />
-        </Container>
+    <Container>
+      <BaseBox style={{ width: 780, backgroundColor: "#ffffff00" }}>
+        <BaseTypography variant="h1">Welcome to Google Place</BaseTypography>
+        <BaseTypography variant="body2">
+          Easy and Fast to find the location from your browser.
+        </BaseTypography>
       </BaseBox>
-    </React.Fragment>
+    </Container>
   );
 }
 
