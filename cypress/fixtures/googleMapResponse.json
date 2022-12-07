@@ -1,0 +1,181 @@
+{
+  "predictions": [
+    {
+      "description": "Jakarta, Indonesia",
+      "matched_substrings": [
+        {
+          "length": 2,
+          "offset": 0
+        }
+      ],
+      "place_id": "ChIJnUvjRenzaS4RoobX2g-_cVM",
+      "reference": "ChIJnUvjRenzaS4RoobX2g-_cVM",
+      "structured_formatting": {
+        "main_text": "Jakarta",
+        "main_text_matched_substrings": [
+          {
+            "length": 2,
+            "offset": 0
+          }
+        ],
+        "secondary_text": "Indonesia"
+      },
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Jakarta"
+        },
+        {
+          "offset": 9,
+          "value": "Indonesia"
+        }
+      ],
+      "types": ["colloquial_area", "locality", "political", "geocode"]
+    },
+    {
+      "description": "Jaipur, Rajasthan, India",
+      "matched_substrings": [
+        {
+          "length": 2,
+          "offset": 0
+        }
+      ],
+      "place_id": "ChIJgeJXTN9KbDkRCS7yDDrG4Qw",
+      "reference": "ChIJgeJXTN9KbDkRCS7yDDrG4Qw",
+      "structured_formatting": {
+        "main_text": "Jaipur",
+        "main_text_matched_substrings": [
+          {
+            "length": 2,
+            "offset": 0
+          }
+        ],
+        "secondary_text": "Rajasthan, India"
+      },
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Jaipur"
+        },
+        {
+          "offset": 8,
+          "value": "Rajasthan"
+        },
+        {
+          "offset": 19,
+          "value": "India"
+        }
+      ],
+      "types": ["locality", "political", "geocode"]
+    },
+    {
+      "description": "Jacksonville, FL, USA",
+      "matched_substrings": [
+        {
+          "length": 2,
+          "offset": 0
+        }
+      ],
+      "place_id": "ChIJ66_O8Ra35YgR4sf8ljh9zcQ",
+      "reference": "ChIJ66_O8Ra35YgR4sf8ljh9zcQ",
+      "structured_formatting": {
+        "main_text": "Jacksonville",
+        "main_text_matched_substrings": [
+          {
+            "length": 2,
+            "offset": 0
+          }
+        ],
+        "secondary_text": "FL, USA"
+      },
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Jacksonville"
+        },
+        {
+          "offset": 14,
+          "value": "FL"
+        },
+        {
+          "offset": 18,
+          "value": "USA"
+        }
+      ],
+      "types": ["locality", "political", "geocode"]
+    },
+    {
+      "description": "Jalandhar, Punjab, India",
+      "matched_substrings": [
+        {
+          "length": 2,
+          "offset": 0
+        }
+      ],
+      "place_id": "ChIJkeupR1daGjkRuLSlWsA0S8c",
+      "reference": "ChIJkeupR1daGjkRuLSlWsA0S8c",
+      "structured_formatting": {
+        "main_text": "Jalandhar",
+        "main_text_matched_substrings": [
+          {
+            "length": 2,
+            "offset": 0
+          }
+        ],
+        "secondary_text": "Punjab, India"
+      },
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Jalandhar"
+        },
+        {
+          "offset": 11,
+          "value": "Punjab"
+        },
+        {
+          "offset": 19,
+          "value": "India"
+        }
+      ],
+      "types": ["locality", "political", "geocode"]
+    },
+    {
+      "description": "Jabalpur, Madhya Pradesh, India",
+      "matched_substrings": [
+        {
+          "length": 2,
+          "offset": 0
+        }
+      ],
+      "place_id": "ChIJfam2DxqugTkRueNDvBYGAkQ",
+      "reference": "ChIJfam2DxqugTkRueNDvBYGAkQ",
+      "structured_formatting": {
+        "main_text": "Jabalpur",
+        "main_text_matched_substrings": [
+          {
+            "length": 2,
+            "offset": 0
+          }
+        ],
+        "secondary_text": "Madhya Pradesh, India"
+      },
+      "terms": [
+        {
+          "offset": 0,
+          "value": "Jabalpur"
+        },
+        {
+          "offset": 10,
+          "value": "Madhya Pradesh"
+        },
+        {
+          "offset": 26,
+          "value": "India"
+        }
+      ],
+      "types": ["locality", "political", "geocode"]
+    }
+  ],
+  "status": "OK"
+}

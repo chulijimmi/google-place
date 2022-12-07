@@ -35,6 +35,7 @@ function SearchPlaceForm() {
           placeholder="Search Place"
           onChange={handleSearchChange}
           value={place}
+          data-testid="input-place"
         />
       </Paper>
     </Grid>
