@@ -4,8 +4,18 @@ import BaseTypography from "../../components/BaseTypography";
 import BaseBox from "../../components/BaseBox";
 import BaseButton from "../../components/BaseButton";
 import { useNavigate } from "react-router-dom";
+import settingLocalRepository from "../../repository/local/settingLocalRepository";
+import { useDispatch } from "react-redux";
+import { setTheme } from "../setting/settingSlice";
 function App() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  React.useEffect(() => {
+    const cache = settingLocalRepository.get();
+    if (cache != null) {
+      dispatch(setTheme(cache));
+    }
+  }, [dispatch]);
   return (
     <Container>
       <BaseBox style={{ width: 780, backgroundColor: "#ffffff00" }}>

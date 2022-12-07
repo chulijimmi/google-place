@@ -1,33 +1,37 @@
 import { ofType } from "redux-observable";
-import { delay, map, mergeMap } from "rxjs";
-import api from "../config/api";
+import {
+  debounceTime,
+  distinctUntilChanged,
+  filter,
+  map,
+  mergeMap
+} from "rxjs";
 import {
   setSearch,
   setPlaces,
   setErrorMessage
 } from "../features/feed/feedSlice";
-
-const url = "https://maps.googleapis.com/maps/api/place/autocomplete/json";
+import googleNetworkRepository from "../repository/network/googleNetworkRepository";
 
 const get = (action$, $state, { get }) =>
   action$.pipe(
+    filter((action$) => action$.payload && action$.payload.length > 0),
     ofType(setSearch().type),
-    delay(500),
+    debounceTime(1000),
+    distinctUntilChanged(),
     mergeMap((action$) =>
-      get(
-        `${url}?input=${action$.payload}&types=geocode&key=${api.googleMaps}`
-      ).pipe(
-        map((httpResponse) => {
-          if (httpResponse.response.status !== "OK") {
+      googleNetworkRepository.get(get, action$.payload).pipe(
+        map((response) => {
+          if (response.code !== 200) {
             return {
               type: setErrorMessage().type,
-              payload: httpResponse.response.error_message
+              payload: response.message
             };
           } else {
             return {
               type: setPlaces().type,
               payload: {
-                predictions: httpResponse.response.predictions,
+                predictions: response.data,
                 visited: action$.payload
               }
             };

@@ -9,6 +9,7 @@ import BaseTypography from "../../components/BaseTypography";
 import { useDispatch, useSelector } from "react-redux";
 import { themeToogled } from "./settingSlice";
 import BaseBox from "../../components/BaseBox";
+import settingLocalRepository from "../../repository/local/settingLocalRepository";
 
 function Setting() {
   const theme = useSelector((state) => state.setting.theme.name);
@@ -16,6 +17,7 @@ function Setting() {
 
   const handleChange = () => {
     dispatch(themeToogled());
+    settingLocalRepository.store(theme === "light" ? "dark" : "light");
   };
 
   return (

@@ -1,12 +1,23 @@
-import { useDispatch } from "react-redux";
-import { setSearch } from "./feedSlice";
+import { Container } from "@mui/material";
+import BaseBox from "../../components/BaseBox";
+import SearchPlaceForm from "./SearchPlaceForm";
+import SearchPlaceResult from "./SearchPlaceResult";
 
 function Feed() {
-  const dispatch = useDispatch();
   return (
-    <div>
-      Feed <button onClick={() => dispatch(setSearch("Ja"))}>Set Search</button>
-    </div>
+    <BaseBox
+      sx={{
+        width: "100%",
+        bgcolor: "background.default",
+        color: "text.primary",
+        padding: "15px 0px"
+      }}
+    >
+      <Container>
+        <SearchPlaceForm />
+        <SearchPlaceResult />
+      </Container>
+    </BaseBox>
   );
 }
 

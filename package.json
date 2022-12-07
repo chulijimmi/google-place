@@ -18,13 +18,19 @@
     "react-scripts": "5.0.1",
     "redux-observable": "^2.0.0",
     "rxjs": "^7.6.0",
+    "uuid": "^9.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "start:cra": "react-scripts -r @cypress/instrument-cra start",
+    "cy:expect": "cypress-expect run --min-passing 1",
+    "cy:open": "cypress open",
+    "check-coverage": "check-coverage src/component/**.js src/features/**.js",
+    "only-covered": "only-covered src/component/**.js src/features/**.js"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +51,15 @@
     ]
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.10.0",
+    "@cypress/instrument-cra": "^1.4.0",
+    "babel-plugin-istanbul": "^6.1.1",
+    "check-code-coverage": "^1.10.4",
+    "cypress": "^12.0.1",
+    "cypress-expect": "^2.5.3",
+    "istanbul-lib-coverage": "^3.2.0",
+    "nyc": "^15.1.0",
     "prettier": "2.8.0"
-  }
+  },
+  "proxy": "https://maps.googleapis.com"
 }
