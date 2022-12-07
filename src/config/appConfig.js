@@ -1,5 +1,5 @@
 const apiKey = {
-  googleMaps: ""
+  googleMaps: process.env.GOOGLE_MAP_API_KEY
 };
 
 const apiUrl = {
