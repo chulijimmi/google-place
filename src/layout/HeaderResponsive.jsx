@@ -100,10 +100,10 @@ function HeaderResponsive() {
                 display: { xs: "block", md: "none" }
               }}
             >
-              <MenuItem onClick={() => console.log("home")}>
+              <MenuItem onClick={() => handleMenu("/")}>
                 <BaseTypography textAlign="center">Home</BaseTypography>
               </MenuItem>
-              <MenuItem onClick={() => console.log("feed")}>
+              <MenuItem onClick={() => handleMenu("feed")}>
                 <BaseTypography textAlign="center">Feed</BaseTypography>
               </MenuItem>
             </Menu>
@@ -129,7 +129,7 @@ function HeaderResponsive() {
           </BaseTypography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             <Button
-              onClick={() => handleMenu("")}
+              onClick={() => handleMenu("/")}
               sx={{ my: 2, color: "white", display: "block" }}
             >
               Home
