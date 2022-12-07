@@ -84,6 +84,7 @@ function SearchPlaceResult() {
                   <MenuItem
                     key={item.reference}
                     onClick={() => handleVisit(item)}
+                    data-testid="item-place"
                   >
                     <ListItemText>{item.description}</ListItemText>
                   </MenuItem>

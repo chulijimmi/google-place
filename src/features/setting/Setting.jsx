@@ -38,9 +38,20 @@ function Setting() {
             name="controlled-radio-buttons-group"
             value={theme}
             onChange={handleChange}
+            data-testid="rg-theme"
           >
-            <FormControlLabel value="light" control={<Radio />} label="Light" />
-            <FormControlLabel value="dark" control={<Radio />} label="Dark" />
+            <FormControlLabel
+              value="light"
+              control={<Radio />}
+              label="Light"
+              data-testid="fc-light"
+            />
+            <FormControlLabel
+              value="dark"
+              control={<Radio />}
+              label="Dark"
+              data-testid="fc-dark"
+            />
           </RadioGroup>
         </FormControl>
       </Container>

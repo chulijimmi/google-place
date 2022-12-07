@@ -23,8 +23,15 @@ function App() {
         <BaseTypography variant="body2">
           Easy and Fast to find the location from your browser.
         </BaseTypography>
-        <BaseButton onClick={() => navigate("feed")}>Feed</BaseButton>
-        <BaseButton onClick={() => navigate("setting")}>Setting</BaseButton>
+        <BaseButton onClick={() => navigate("feed")} data-testid="btn-feed">
+          Feed
+        </BaseButton>
+        <BaseButton
+          onClick={() => navigate("setting")}
+          data-testid="btn-setting"
+        >
+          Setting
+        </BaseButton>
       </BaseBox>
     </Container>
   );
