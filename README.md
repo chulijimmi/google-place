@@ -2,6 +2,18 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+### Running In Local
+
+This requirement need to setup for running this app in your local environment.
+
+1. Setup you google map api key
+   Reference: https://developers.google.com/maps/documentation/javascript/get-api-key
+2. Clone this project
+3. Add variable GOOGLE_MAP_API_KEY to your local environtment with google map api key value.
+   Reference: https://www.freecodecamp.org/news/how-to-set-an-environment-variable-in-linux/
+   Reference: https://www.architectryan.com/2018/08/31/how-to-change-environment-variables-on-windows-10/
+4. Run `npm start`
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -43,3 +55,5 @@ Follow the instructions [Google Maps](https://developers.google.com/maps/documen
 ### Deployment Configuration
 
 We are using netifly to serve our content to the cloud.
+You can access this app on this url
+https://deploy-preview-5--imaginative-crostata-d30042.netlify.app/feed
